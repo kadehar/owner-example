@@ -26,6 +26,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
 
-    systemProperty("api.token", "abcdfdfgdfgdfhfhdfh")
+tasks.withType(Test) {
+    systemProperties = System.properties
 }
